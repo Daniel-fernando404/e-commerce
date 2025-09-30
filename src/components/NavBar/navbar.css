@@ -1,0 +1,18 @@
+img{
+    width: 36px;
+    height: auto;
+}
+
+.navbar-logo {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    margin-right: 8px;
+    background: none;
+}
+
+.navbar-title {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-left: 6px;
+}
