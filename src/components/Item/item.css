@@ -1,0 +1,23 @@
+.item-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    overflow: hidden;
+}
+
+.item-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.item-card img {
+    height: 300px;
+    object-fit: cover;
+}
+
+.item-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #28a745;
+    margin: 10px 0;
+}
