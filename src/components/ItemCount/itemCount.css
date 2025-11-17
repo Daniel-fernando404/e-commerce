@@ -1,7 +1,6 @@
 .item-count {
-    margin-top: 20px;
+  margin-top: 20px;
 }
-
 .item-count button:disabled {
-    cursor: not-allowed;
+  cursor: not-allowed;
 }

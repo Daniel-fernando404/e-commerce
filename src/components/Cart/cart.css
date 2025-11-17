@@ -1,0 +1,13 @@
+.cart-items {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.cart-item img {
+  max-height: 150px;
+  object-fit: cover;
+}
+.cart-summary {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #f8f9fa;
+}

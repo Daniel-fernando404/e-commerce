@@ -1,14 +1,55 @@
-.item-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 30px;
-    padding: 20px;
-    max-width: 1200px;
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import NavBar from './components/NavBar/NavBar'
+import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
+import Cart from './components/Cart/Cart'
+import './App.css'
+
+function App() {
+  return (
+    <BrowserRouter>
+      <div className='App'>
+        <NavBar/>
+        <Routes>
+          <Route path="/" element={<ItemListContainer greeting="Bienvenido a nuestra tienda de ropa" />} />
+          <Route path="/category/:categoryId" element={<ItemListContainer />} />
+          <Route path="/item/:id" element={<ItemDetailContainer />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="*" element={<h1 className="text-center mt-5">404 - Página no encontrada</h1>} />
+        </Routes>
+      </div>
+    </BrowserRouter>
+  )
+}
+
+export default App
+
+.cart-items {
+    max-width: 900px;
     margin: 0 auto;
 }
 
+.cart-item img {
+    max-height: 150px;
+    object-fit: cover;
+}
+
+.cart-summary {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #f8f9fa;
+}
+
+.item-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px,1fr));
+  gap: 30px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 @media (max-width: 768px) {
-    .item-list {
-        grid-template-columns: 1fr;
-    }
+  .item-list {
+    grid-template-columns: 1fr;
+  }
 }

@@ -1,17 +1,52 @@
 .item-detail {
-    max-width: 1000px;
+    max-width: 1150px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 35px 25px;
 }
 
-.item-detail img {
-    max-height: 500px;
-    object-fit: cover;
+.item-detail__imageBox {
+    background: #f3f5f6;
+    border: 1px solid #e4e6e7;
+    border-radius: 10px;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
 }
 
-.item-detail-price {
+.item-detail__imageBox img {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.item-detail__title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.item-detail__price {
     font-size: 2rem;
-    font-weight: bold;
+    font-weight: 700;
     color: #28a745;
-    margin: 20px 0;
+    margin: 15px 0 20px;
 }
+
+@media (max-width: 768px) {
+    .item-detail__imageBox {
+        min-height: 400px;
+        padding: 15px;
+    }
+    .item-detail__title {
+        font-size: 1.8rem;
+    }
+    .item-detail__price {
+        font-size: 1.6rem;
+    }
+}
+
+/* Elimina reglas antiguas que afectaban img directamente:
+   Asegúrate de borrar cualquier selector .item-detail img previo para evitar imagen duplicada o tamaño incorrecto */
